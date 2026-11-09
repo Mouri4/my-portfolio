@@ -309,7 +309,7 @@ section,
   margin-left: 0.05em;
   font-weight: 700;
   color: var(--text);
-  font-size: clamp(1.45rem, 3.2vw + 0.3rem, 2.55rem);
+  font-size: clamp(1rem, 3.2vw + 0.3rem, 2rem);
 }
 
 .mleft1 #h2 {
