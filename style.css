@@ -3417,7 +3417,7 @@ html[data-theme="dark"] .main .btn.alt { color: #ececec; }
 
 .cta-row { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.1rem 0 0 .2em; }
 .mleft1 { height: auto; }
-.mleft1 .cta-row .btn.alt { color: var(--text); border-color: var(--text); }
+.mleft1 .cta-row .btn.alt { border-color: var(--text); }
 .mleft1 .cta-row .btn.alt:hover { color: var(--bg); background: var(--text); }
 a.plain { color: inherit; }
 
