@@ -42,7 +42,13 @@
     /* apply the saved theme before first paint (light is the default) */
     try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) { }
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    /* profile photo is always a circle, even on tall screens (phone "desktop mode") */
+    @media (min-width: 901px) {
+      #front { width: min(60%, 58vh); height: auto; aspect-ratio: 1 / 1; flex: none; }
+    }
+  </style>
   <script src="https://kit.fontawesome.com/22c625fc9a.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -91,8 +97,7 @@
             </div>
             <!-- social icons inside the mobile menu -->
             <ul class="social-list menu-social">
-              <li><a href="#" data-social="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon"></i></a></li>
-              <li><a href="#" data-social="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram icon"></i></a></li>
+              <li><a href="#" data-social="linkedin" aria-label="linkedin"><i class="fa-brands fa-linkedin icon"></i></a></li>
               <li><a href="#" data-social="github" aria-label="GitHub"><i class="fa-brands fa-github icon"></i></a></li>
             </ul>
           </div>
@@ -100,18 +105,14 @@
           <div class="nav-right">
             <ul class="social-list">
               <li>
-                <a href="#" data-social="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon"></i></a>
-              </li>
-              <li>
-                <a href="#" data-social="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram icon"></i></a>
+                <a href="#" data-social="linkedin" aria-label="linkedin"><i class="fa-brands fa-linkedin icon"></i></a>
               </li>
               <li>
                 <a href="#" data-social="github" aria-label="GitHub"><i class="fa-brands fa-github icon"></i></a>
               </li>
             </ul>
 
-            <!-- search designs -->
-            
+
 
             <!-- light / dark mode -->
             <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"
@@ -159,12 +160,13 @@
         <div class="main2">
           <div class="mleft">
             <div class="mleft1">
-              <h1 id="h1">Hi, I am Taulo, Jhoncen</h1>
+              <h1 id="h1">Hi, I'm Jhoncen Taulo</h1>
               <h1 id="h2">GRAPHIC DESIGNER</h1>
               <p>I am from Philippines and currently living in Laguna. I am studying for a Bachelor of Science in
                 Information Technology while building a career as a graphic designer, driven by a passion for creating
                 visually appealing and user-friendly designs.</p>
-              <p>"From pixel-perfect UI to immersive 3D renders."</p>
+              <br>
+              <p>"Think Big. Design Smart. Stand Out."</p>
               <pre>GRAPHICS DESIGNER  /  UI/UX  /  3D RENDER</pre>
               <div class="cta-row">
                 <a class="btn" href="projects" data-route="projects">View My Projects</a>
@@ -183,19 +185,23 @@
       <!-- ===================== ABOUT ===================== -->
       <div class="main3" id="about">
         <h2 id="m3t1">About</h2>
-        <p class="m3t3">Fullname: Jhoncen A. Taulo<br>
-          Title: Graphic Designer / UI-UX / 3D Artist<br>
-          Location: Calamba City, Laguna, Philippines<br>
-          Contact: 09918565302<br>
-          Email: <a class="plain" href="mailto:jhoncentaulo79@gmail.com">jhoncentaulo79@gmail.com</a><br>
-          Education: BS Information Technology (3rd year), City College of Calamba<br>
-          Current occupation: Student and aspiring graphic designer<br>
-          Experience: Entry level (school and personal design projects)<br>
-          Specialization: Graphic design, UI/UX design, 3D art</p>
-        <p class="m3t3 bio">&nbsp;&nbsp;I am a 3rd yr Bachelor of Science in Information Technology (BSIT) student at City
-          College of Calamba, building my career in UI/UX design, graphic design, and 3D art. I am passionate about
-          creating visually appealing, user-friendly, and creative digital experiences. My areas of interest include
-          user interface design, user experience, visual communication, graphic design, and 3D modeling.</p>
+        <p class="m3t3"><strong>Fullname:</strong> Jhoncen A. Taulo<br>
+          <strong>Professional Title:</strong> Graphic Designer / UI-UX / 3D Artist<br>
+          <strong>Location:</strong> Calamba City, Laguna, Philippines<br>
+          <strong>Contact Nummber:</strong> 09918565302<br>
+          <strong>Email:</strong> <a class="plain" href="mailto:jhoncentaulo79@gmail.com">jhoncentaulo79@gmail.com</a><br>
+          <strong>Education:</strong> BS Information Technology (3rd year), City College of Calamba<br>
+          <strong>Current occupation:</strong> Student and aspiring graphic designer<br>
+          <strong>Years of Experience:</strong> Entry level (2yrs school and personal design projects)<br>
+          <strong>Specialization:</strong> Graphic design, UI/UX design, 3D art</p>
+        <p class="m3t3 bio">&nbsp;&nbsp;I am a third-year Bachelor of Science in Information Technology (BSIT) 
+          student at City College of Calamba, aspiring to build a career in UI/UX design, graphic design, and 3D art. 
+          I have a strong interest in creating visually appealing, user-friendly, and meaningful digital experiences. 
+          My areas of expertise and interest include user interface design, user experience design, graphic design, 
+          visual communication, and 3D modeling. I have worked on various academic and personal projects involving website 
+          interfaces, digital graphics, and creative visual concepts. My goal is to continuously improve my design and 
+          technical skills, explore new creative tools and technologies, and become a professional designer who combines 
+          creativity, functionality, and innovation in every project.</p>
       </div>
 
       <!-- ===================== SKILLS ===================== -->
@@ -275,42 +281,80 @@
             <div class="programming-content">
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/html.png" alt="html" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="html skill level 80%">
+                  <div class="skill-fill" style="--level: 80%; --color: #e34f26;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/css-3.png" alt="css" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="css skill level 75%">
+                  <div class="skill-fill" style="--level: 75%; --color: #1572b6;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/js.png" alt="javascript" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="javascript skill level 60%">
+                  <div class="skill-fill" style="--level: 60%; --color: #f7df1e;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/php.png" alt="php" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="php skill level 60%">
+                  <div class="skill-fill" style="--level: 60%; --color: #777bb4;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/MySQL-removebg.png" alt="mysql" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="mysql skill level 60%">
+                  <div class="skill-fill" style="--level: 60%; --color: #00a0c6;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/reactv2-removebg.png" alt="react" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="react skill level 30%">
+                  <div class="skill-fill" style="--level: 30%; --color: #61dafb;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/C_-removebg.png" alt="C#" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="C# skill level 40%">
+                  <div class="skill-fill" style="--level: 40%; --color: #9b4f96;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/C_Programming_Language_Sticker-removebg-.png" alt="C" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="C skill level 40%">
+                  <div class="skill-fill" style="--level: 40%; --color: #5c6bc0;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/javai-removebg.png" alt="java" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="java skill level 40%">
+                  <div class="skill-fill" style="--level: 40%; --color: #e76f00;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/git.png" alt="git" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="git skill level 50%">
+                  <div class="skill-fill" style="--level: 50%; --color: #f05032;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/Githubv2.jpg" alt="github" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="github skill level 60%">
+                  <div class="skill-fill" style="--level: 60%; --color: #ffffff;"></div>
+                </div>
               </div>
               <div class="programming-conts">
                 <img loading="lazy" decoding="async" src="icons/Visual-Studio-Code-removebg.png" alt="visual-studio-code" class="programming-img">
+                <div class="skill-bar" role="img" aria-label="visual-studio-code skill level 80%">
+                  <div class="skill-fill" style="--level: 80%; --color: #007acc;"></div>
+                </div>
               </div>
             </div>
           </div>
+
+          
 
           <div class="programming-page prof-page">
             <div class="programming-title">
@@ -380,8 +424,8 @@
             <div class="xt-body">
               <span class="xt-k">Position</span>
               <h3>Full-Stack Developer</h3>
-              <p class="xt-proj"><b>Project:</b> Integrated POS &amp; E-Commerce System &mdash; one website serving
-                staff, administrators and customers.</p>
+              <p class="xt-proj"><b>Project:</b> PASTRYLIBERTY: A WEB-BASED INTEGRATED ORDERING AND POINT-OF-SALE SYSTEM 
+              FOR PHYSICAL AND ONLINE BAKERY TRANSACTIONS</p>
 
               <ul class="xt-tags" aria-label="Focus areas">
                 <li>Full-Stack Development</li>
@@ -524,7 +568,7 @@
           <h3>PATIENCE</h3>
           <p class="gold">—FINE JEWELRY—</p>
         </div>
-        <img decoding="async" src="ceel-img/logo-icon.png" alt="Patience Fine Jewelry lotus emblem">
+        <img decoding="async" src="ceel-img/logo-icon-nobg.png" alt="Patience Fine Jewelry lotus emblem">
       </div>
 
       <hr>
@@ -602,8 +646,8 @@
         <ul class="bs-list">
           <li>Landing page banner</li>
           <li>Social media post</li>
-          <li>Dark ad banner</li>
-          <li>Slim web banner</li>
+          <li>banner ad</li>
+          <li>News letter</li>
         </ul>
       </aside>
       <div class="dm-hero" id="brew-hero" data-design>
@@ -942,12 +986,9 @@
           <p>Email: <a href="mailto:jhoncentaulo79@gmail.com">jhoncentaulo79@gmail.com</a></p>
           <p>Number: <a href="tel:+639918565302">09918565302</a></p>
           <p>Location: Calamba City, Laguna, Philippines</p>
-          <p>Facebook: Jhoncen Taulo</p>
           <ul class="contact-social" aria-label="Social links">
             <li><a data-social="github" href="#" hidden>GitHub</a></li>
             <li><a data-social="linkedin" href="#" hidden>LinkedIn</a></li>
-            <li><a data-social="facebook" href="#" hidden>Facebook</a></li>
-            <li><a data-social="instagram" href="#" hidden>Instagram</a></li>
           </ul>
         </div>
 
@@ -1167,6 +1208,7 @@
     })();
   </script>
   <script src="projects-data.js"></script>
+  <script src="js/analytics.js"></script>
   <script src="js/router.js"></script>
   <script src="js/projects.js"></script>
   <script src="js/contact.js"></script>

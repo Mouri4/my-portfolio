@@ -36,7 +36,7 @@ window.PROJECTS = [
       'Color palette: #93B8DD, #2C3D4E, #C9A500, #DEDEDE',
       'Primary typeface Playfair Display, secondary Poltawski Nowy'
     ],
-    technologies: ['Logo Design', 'Typography', 'Color Palette', 'Brand Guidelines'],
+    technologies: ['Laptop', 'Photoshop', 'Color Palette', 'Brand Guidelines'],
     screenshots: [
       { src: 'ceel-img/logo-icon.png', alt: 'Patience lotus emblem' },
       { src: 'ceel-img/Badge-2.png', alt: 'Patience logo on navy badge' },
@@ -44,7 +44,7 @@ window.PROJECTS = [
       { src: 'ceel-img/Horizontal Logo.png', alt: 'Patience wide logo lockup' }
     ],
     caseStudy: 'designs',
-    url: '', github: '', demo: '', docs: ''
+    url: 'https://drive.google.com/drive/folders/1XxTMHJ-3GdIuVQQTKczmoKvfXdvCtXXk?usp=sharing', github: '', demo: '', docs: ''
   },
   {
     id: 'brew-haven-campaign',
@@ -68,7 +68,7 @@ window.PROJECTS = [
       'Slim web / newsletter banner',
       'Consistent brand look across all layouts'
     ],
-    technologies: ['Digital Marketing', 'Social Media Graphics', 'Typography', 'Layout Design'],
+    technologies: ['Laptop','Photoshop', 'Social Media Graphics', 'Typography', 'Layout Design'],
     screenshots: [
       { src: 'ceel-img/Pumpkin-Spice-Latte-Splash.png', alt: 'Pumpkin spice latte hero' },
       { src: 'ceel-img/landing-page-banner.png', alt: 'Brew Haven landing page banner' },
@@ -77,7 +77,7 @@ window.PROJECTS = [
       { src: 'ceel-img/news-letter.png', alt: 'Brew Haven slim web banner' }
     ],
     caseStudy: 'marketing',
-    url: '', github: '', demo: '', docs: ''
+    url: 'https://drive.google.com/drive/folders/1QUGARmxFAgI4t717b6xb5XhyR6YTUQaE?usp=sharing', github: '', demo: '', docs: ''
   },
   {
     id: 'patience-grand-opening-poster',
@@ -100,12 +100,12 @@ window.PROJECTS = [
       'Minimalist layout',
       'Tagline reinforcing the brand message'
     ],
-    technologies: ['Poster Design', 'Typography', 'Layout Design'],
+    technologies: ['Laptop', 'Photoshop', 'Poster Design', 'Typography', 'Layout Design'],
     screenshots: [
       { src: 'ceel-img/TypographyBrandPoster.png', alt: 'Patience grand opening poster' }
     ],
     caseStudy: 'poster',
-    url: '', github: '', demo: '', docs: ''
+    url: 'https://drive.google.com/drive/folders/1Ij5mF1x5O1bRhupZI6ddjdt6hhbGSgCY?usp=sharing', github: '', demo: '', docs: ''
   },
   {
     id: 'pos-ecommerce-system',
@@ -131,10 +131,19 @@ window.PROJECTS = [
       'Sales reports and basic analytics',
       'Customer order tracking and product reviews'
     ],
-    technologies: ['Full-Stack Development', 'Point of Sale', 'E-Commerce', 'Role-Based Access'],
-    screenshots: [],
+    technologies: ['Laptop', 'Visual Studio', 'Point of Sale', 'E-Commerce', 'Role-Based Access'],
+    screenshots: [
+       { src: 'ceel-img/admin-staff-login_page.png'},
+       { src: 'ceel-img/customer-login-page.png'},
+       { src: 'ceel-img/customer-signup-page.png'},
+       { src: 'ceel-img/admin-inventory.png'},
+       { src: 'ceel-img/admin-sales-p1.png'},
+       { src: 'ceel-img/customer-browsing-page-p2.png'},
+       { src: 'ceel-img/customer-view-cart.png'},
+       { src: 'ceel-img/staff-POS.png'}
+    ],
     caseStudy: 'experience',
-    url: '', github: '', demo: '', docs: ''
+    url: '', github: 'https://github.com/Mouri4/liberty-ordering-system', demo: 'https://drive.google.com/file/d/1QyIvqbWAaVCkcL3uKqAYTLyV8_9VqaXO/view?usp=sharing', docs: ''
   }
 ];
 
@@ -145,7 +154,14 @@ window.PROJECTS = [
    ============================================================ */
 window.SOCIALS = {
   github: 'https://github.com/Mouri4',      // e.g. 'https://github.com/your-username'
-  linkedin: 'https://www.linkedin.com/',    // e.g. 'https://www.linkedin.com/in/your-name'
+  linkedin: 'https://www.linkedin.com/in/jhoncen-taulo-035631450?utm_source=share_via&utm_content=profile&utm_medium=member_android',    // e.g. 'https://www.linkedin.com/in/your-name'
   facebook: 'https://www.facebook.com/jhoncen.taulo/',
   instagram: 'https://www.instagram.com/jhncen.t/'
 };
+
+/* ============================================================
+   ANALYTICS (optional, PDF section 23)  -  GoatCounter, free + cookie-free.
+   1. Sign up at https://www.goatcounter.com and choose a site code (e.g. 'jhoncen').
+   2. Paste only the code below. Leave '' to keep analytics OFF.
+   ============================================================ */
+window.ANALYTICS = { goatcounter: 'jhoncen' };
